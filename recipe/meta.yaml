@@ -13,7 +13,7 @@ source:
     - setup.py-osx.patch  # [osx and c_compiler != 'toolchain_c']
 
 build:
-  number: 1000
+  number: 1001
   skip: True  # [win]
   script:
     # the setup.py file does some fancy testing for being able to compile
