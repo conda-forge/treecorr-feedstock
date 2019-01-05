@@ -8,9 +8,12 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e0acf0283fa3f5677061358621f6ae0fd7cc6bda8bfced1343256dd4f127b366
+  patches:
+    - setup.py-linux.patch  # [linux and c_compiler != 'toolchain_c']
+    - setup.py-osx.patch  # [osx and c_compiler != 'toolchain_c']
 
 build:
-  number: 0
+  number: 1001
   skip: True  # [win]
   script:
     # the setup.py file does some fancy testing for being able to compile
@@ -24,10 +27,12 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - llvm-openmp  # [osx and c_compiler != 'toolchain_c']
   host:
     - python
     - pip
     - cffi
+    - llvm-openmp  # [osx and c_compiler != 'toolchain_c']
   run:
     - python
     - numpy
@@ -36,6 +41,7 @@ requirements:
     - fitsio
     - pyyaml
     - pandas
+    - llvm-openmp  # [osx and c_compiler != 'toolchain_c']
 
 test:
   imports:
