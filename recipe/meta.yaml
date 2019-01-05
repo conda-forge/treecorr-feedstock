@@ -9,7 +9,8 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e0acf0283fa3f5677061358621f6ae0fd7cc6bda8bfced1343256dd4f127b366
   patches:
-    - setup.py.patch  # [linux and c_compiler != 'toolchain_c']
+    - setup.py-linux.patch  # [linux and c_compiler != 'toolchain_c']
+    - setup.py-osx.patch  # [osx and c_compiler != 'toolchain_c']
 
 build:
   number: 1000
@@ -26,6 +27,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - llvm-openmp  # [osx and c_compiler != 'toolchain_c']
   host:
     - python
     - pip
