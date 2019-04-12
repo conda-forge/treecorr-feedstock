@@ -6,11 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: de9a198badb70c37f995c9fe21a07d57a41b3a9e3a22bd38023bba61ed070353
-  # patches:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz  # [osx]
+  sha256: de9a198badb70c37f995c9fe21a07d57a41b3a9e3a22bd38023bba61ed070353  # [osx]
+  git_url: https://github.com/rmjarvis/TreeCorr.git  # [linux]
+  git_rev: 4d5dcea30ef109d071100e431da4cd431100571f  # [linux]
+  patches:
+    - setup.py-osx.patch  # [osx]
   #   - setup.py-linux.patch  # [linux]
-  #   - setup.py-osx.patch  # [osx]
 
 build:
   number: 0
@@ -39,6 +41,7 @@ requirements:
     - fitsio
     - pyyaml
     - pandas
+    - lsstdesc.coord
     - llvm-openmp  # [osx]
 
 test:
@@ -56,7 +59,7 @@ about:
   summary: |
     TreeCorr is a package for efficiently computing 2-point and 3-point
     correlation functions.
-  doc_url: http://rmjarvis.github.io/TreeCorr/html/index.html
+  doc_url: http://rmjarvis.github.io/TreeCorr/
   dev_url: https://github.com/rmjarvis/TreeCorr
 
 extra:
