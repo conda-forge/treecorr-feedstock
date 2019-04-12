@@ -5,7 +5,7 @@
      'gcc' : ['-fopenmp','-O3','-ffast-math'],
      'icc' : ['-openmp','-O3'],
 -    'clang' : ['-O3','-ffast-math'],
-+    'clang' : ['-fopenmp','-O3','-ffast-math'],
++    'clang' : ['-fopenmp', '-O3','-ffast-math'],
      #'clang w/ OpenMP' : ['-fopenmp=libomp','-O3','-ffast-math'],
      'clang w/ OpenMP' : ['-fopenmp','-O3','-ffast-math'],
      'unknown' : [],
