@@ -1,15 +1,15 @@
 --- setup.py
 +++ setup.py
-@@ -50,7 +50,7 @@
+@@ -52,7 +52,7 @@
  copt =  {
      'gcc' : ['-fopenmp','-O3','-ffast-math'],
      'icc' : ['-openmp','-O3'],
 -    'clang' : ['-O3','-ffast-math'],
-+    'clang' : ['-fopenmp','-O3','-ffast-math'],
++    'clang' : ['-fopenmp', '-O3','-ffast-math'],
      #'clang w/ OpenMP' : ['-fopenmp=libomp','-O3','-ffast-math'],
      'clang w/ OpenMP' : ['-fopenmp','-O3','-ffast-math'],
      'unknown' : [],
-@@ -58,7 +58,7 @@
+@@ -60,7 +60,7 @@
  lopt =  {
      'gcc' : ['-fopenmp'],
      'icc' : ['-openmp'],

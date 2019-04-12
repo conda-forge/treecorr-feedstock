@@ -1,6 +1,6 @@
 --- setup.py
 +++ setup.py
-@@ -53,14 +53,14 @@
+@@ -55,14 +55,14 @@
      'clang' : ['-O3','-ffast-math'],
      #'clang w/ OpenMP' : ['-fopenmp=libomp','-O3','-ffast-math'],
      'clang w/ OpenMP' : ['-fopenmp','-O3','-ffast-math'],
@@ -15,5 +15,5 @@
 -    'unknown' : [],
 +    'unknown' : ['-fopenmp',  '-L%s/lib' % os.environ['PREFIX']],
  }
- 
+
  if "--debug" in sys.argv:
