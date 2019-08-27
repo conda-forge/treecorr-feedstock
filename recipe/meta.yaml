@@ -8,9 +8,9 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e5464eab759163360c205200ebc4dc0ef5e0a868dd551993009bc2220d51ff7a
-  patches:
-    - setup.py-osx.patch  # [osx]
-    - setup.py-linux.patch  # [linux]
+#   patches:
+#     - setup.py-osx.patch  # [osx]
+#     - setup.py-linux.patch  # [linux]
 
 build:
   number: 0
