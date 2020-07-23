@@ -5,7 +5,7 @@ Home: https://github.com/rmjarvis/TreeCorr
 
 Package license: BSD-2-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: TreeCorr is a package for efficiently computing 2-point and 3-point
 correlation functions.
