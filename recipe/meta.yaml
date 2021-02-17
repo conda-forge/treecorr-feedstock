@@ -1,5 +1,5 @@
 {% set name = "TreeCorr" %}
-{% set version = "4.1.5" %}
+{% set version = "4.1.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0cd832909ed1c033834d452bd8736ae1f918b2acd2fb1e8e6928537791b5f4d5
+  sha256: c29995c998581ff53d80d89094d625315bb57e4952090688e5a7f6fc0b0d4b9a
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   script:
     # the setup.py file does some fancy testing for being able to compile
