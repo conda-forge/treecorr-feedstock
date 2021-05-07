@@ -1,5 +1,5 @@
 {% set name = "TreeCorr" %}
-{% set version = "4.2.0" %}
+{% set version = "4.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 63dba3fd39dc8c13f5b6491265f2dd52779b833c19385c659c1dab6e50c86b57
+  sha256: f2b800e5135bbd8bb8df76dad82a518953247f6ecb5bf31e62bdf692c359c8bf
 
 build:
   number: 0
