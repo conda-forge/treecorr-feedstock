@@ -10,7 +10,7 @@ source:
   sha256: e970b766c0a7a82021253a26ddd8768fd0e2b8fc74ca2df851633b6ab68051bd
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   script:
     # the setup.py file does some fancy testing for being able to compile
