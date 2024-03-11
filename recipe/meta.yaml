@@ -11,7 +11,10 @@ source:
 
 build:
   number: 0
-  #skip: true  # [win]   (should work on Windows now)
+  skip: true  # [win]
+  # It should work on Windows now, but need to do the following before it will work:
+  # 1. get LSSTDESC.Coord onto conda-forge with win installation
+  # 2. conditionally skip fitsio dependency for windows, since fitsio does not work on Windows yet.
   script:
     # the setup.py file does some fancy testing for being able to compile
     # things right
