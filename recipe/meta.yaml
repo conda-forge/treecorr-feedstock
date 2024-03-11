@@ -46,8 +46,6 @@ requirements:
     - pyyaml
     - pandas
     - lsstdesc.coord
-    - llvm-openmp  # [osx]
-    - libgomp      # [linux]
 
 test:
   imports:
