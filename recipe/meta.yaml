@@ -11,7 +11,7 @@ source:
 
 build:
   number: 1
-  skip: true  # [win]
+  #skip: true  # [win]   (should work on Windows now)
   script:
     # the setup.py file does some fancy testing for being able to compile
     # things right
