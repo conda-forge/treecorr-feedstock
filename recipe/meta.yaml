@@ -40,7 +40,7 @@ requirements:
 
   run:
     - python
-    - numpy
+    - {{ pin_compatible('numpy') }}
     - pybind11 >=2.2
     - fitsio
     - pyyaml
