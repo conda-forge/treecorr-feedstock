@@ -23,25 +23,31 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cffi                                   # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - llvm-openmp  # [osx]
+    - libgomp      # [linux]
     - ccache
+
   host:
     - python
+    - numpy
+    - pybind11 >=2.2
     - pip
-    - cffi
     - llvm-openmp  # [osx]
+    - libgomp      # [linux]
+
   run:
     - python
     - numpy
-    - cffi
+    - pybind11 >=2.2
     - fitsio
     - pyyaml
     - pandas
     - lsstdesc.coord
     - llvm-openmp  # [osx]
+    - libgomp      # [linux]
 
 test:
   imports:
