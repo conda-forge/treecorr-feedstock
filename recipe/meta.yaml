@@ -39,6 +39,7 @@ requirements:
     - numpy
     - pybind11 >=2.2
     - pip
+    - setuptools
 
   run:
     - python
