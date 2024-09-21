@@ -10,7 +10,7 @@ source:
   sha256: 212a8a07bd64fbb0b197635c1f82f2a685a0d943c3b7a17b824078a8e49b8ae0
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   # It should work on Windows now, but need to do the following before it will work:
   # 1. get LSSTDESC.Coord onto conda-forge with win installation
@@ -28,6 +28,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
