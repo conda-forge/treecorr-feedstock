@@ -1,4 +1,4 @@
-{% set name = "TreeCorr" %}
+{% set name = "treecorr" %}
 {% set version = "5.0.1" %}
 
 package:
