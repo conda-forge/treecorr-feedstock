@@ -1,5 +1,5 @@
 {% set name = "treecorr" %}
-{% set version = "5.0.1" %}
+{% set version = "5.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 212a8a07bd64fbb0b197635c1f82f2a685a0d943c3b7a17b824078a8e49b8ae0
+  sha256: 4c22b365bb1787dccb2873340511b9ea7c45a184fa0192f0a84fb84a9079e659
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   # It should work on Windows now, but need to do the following before it will work:
   # 1. get LSSTDESC.Coord onto conda-forge with win installation
