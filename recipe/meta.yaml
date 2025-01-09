@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 4c22b365bb1787dccb2873340511b9ea7c45a184fa0192f0a84fb84a9079e659
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   # It should work on Windows now, but need to do the following before it will work:
   # 1. get LSSTDESC.Coord onto conda-forge with win installation
@@ -40,6 +40,7 @@ requirements:
     - pybind11 >=2.2
     - pip
     - setuptools
+    - llvm-openmp  # [osx]
 
   run:
     - python
