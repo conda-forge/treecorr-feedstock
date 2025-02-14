@@ -1,5 +1,5 @@
 {% set name = "treecorr" %}
-{% set version = "5.0.2" %}
+{% set version = "5.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4c22b365bb1787dccb2873340511b9ea7c45a184fa0192f0a84fb84a9079e659
+  sha256: 446088074c238c79d271aff9eda34f36efc538e9ecf0b6578d53c8c7996c0f29
+  patches:
+    - pybind11.patch
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   # It should work on Windows now, but need to do the following before it will work:
   # 1. get LSSTDESC.Coord onto conda-forge with win installation
@@ -20,6 +22,7 @@ build:
     # things right
     - export CPATH="${PREFIX}/include:${CPATH}"  # [linux]
     - export LIBRARY_PATH="${PREFIX}/lib:${LIBRARY_PATH}"  # [linux]
+    - ls -lah *
     - {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
