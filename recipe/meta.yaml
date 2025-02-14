@@ -22,8 +22,7 @@ build:
     # things right
     - export CPATH="${PREFIX}/include:${CPATH}"  # [linux]
     - export LIBRARY_PATH="${PREFIX}/lib:${LIBRARY_PATH}"  # [linux]
-    - mkdir -p include
-    - mv src/PyBind11Helper.h include/PyBind11Helper.h
+    - ls -lah include/*
     - {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
