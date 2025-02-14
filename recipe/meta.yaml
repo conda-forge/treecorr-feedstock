@@ -1,5 +1,5 @@
 {% set name = "treecorr" %}
-{% set version = "5.1.0" %}
+{% set version = "5.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 446088074c238c79d271aff9eda34f36efc538e9ecf0b6578d53c8c7996c0f29
-  patches:
-    - pybind11.patch
+  sha256: 8b498bdd7b3c83c75123af7fe6228f742c9b985dbd5c932c6991972ddfcb1638
 
 build:
   number: 0
