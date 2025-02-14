@@ -8,11 +8,11 @@ Subject: [PATCH] Create PyBind11Helper.h
  1 file changed, 30 insertions(+)
  create mode 100644 include/PyBind11Helper.h
 
-diff --git a/include/PyBind11Helper.h b/include/PyBind11Helper.h
+diff --git include/PyBind11Helper.h include/PyBind11Helper.h
 new file mode 100644
 index 00000000..0a915e85
 --- /dev/null
-+++ b/include/PyBind11Helper.h
++++ include/PyBind11Helper.h
 @@ -0,0 +1,30 @@
 +/* Copyright (c) 2003-2024 by Mike Jarvis
 + *
