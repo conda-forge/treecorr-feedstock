@@ -1,2 +1,4 @@
+diff --git a/src/PyBind11Helper.h b/include/PyBind11Helper.h
+similarity index 100%
 rename from src/PyBind11Helper.h
 rename to include/PyBind11Helper.h
