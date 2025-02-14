@@ -1,3 +1,13 @@
+From 2a257d4c5cf282204dadab2a56dae238f7a5a190 Mon Sep 17 00:00:00 2001
+From: "Matthew R. Becker" <beckermr@users.noreply.github.com>
+Date: Fri, 14 Feb 2025 09:38:18 -0600
+Subject: [PATCH] Rename PyBind11Helper.h to PyBind11Helper.h
+
+---
+ {src => include}/PyBind11Helper.h | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename {src => include}/PyBind11Helper.h (100%)
+
 diff --git a/src/PyBind11Helper.h b/include/PyBind11Helper.h
 similarity index 100%
 rename from src/PyBind11Helper.h
