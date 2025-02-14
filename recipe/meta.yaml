@@ -22,7 +22,7 @@ build:
     # things right
     - export CPATH="${PREFIX}/include:${CPATH}"  # [linux]
     - export LIBRARY_PATH="${PREFIX}/lib:${LIBRARY_PATH}"  # [linux]
-    - ls -lah include/*
+    - ls -lah *
     - {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
