@@ -12,7 +12,7 @@ source:
     - patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   # It should work on Windows now, but need to do the following before it will work:
   # 1. get LSSTDESC.Coord onto conda-forge with win installation
